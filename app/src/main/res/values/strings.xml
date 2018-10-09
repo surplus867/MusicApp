@@ -1,0 +1,52 @@
+<resources>
+    <!-- main activity each categories' names-->
+    <string name="songs">Songs</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="app_name">KMusicApp</string>
+    <!-- purpose of the main activity-->
+    <string name="main_activity_information">
+        This is the home page of the app, it presents the category choices for the user.
+        \nEvery other activities can be accessed from here</string>
+    <!-- purpose of the song activity-->
+    <string name="song_activity">
+        This activity shows the soundtracks in a list.
+        \nPressing on a song will open the now playing activity and play the song
+    </string>
+    <!-- purpose of the now playing activity-->
+    <string name="now_playing_activity">
+     This activity shows and play the current songs.
+        \nThere are previous button, play button, and the next button on the playlist
+    </string>
+
+    <!-- Details for song  1 -->
+    <string name="song_1_name" translatable="false">Love Virus</string>
+    <string name="song_1_artist" translatable="false">Kihyun, SeolA</string>
+
+    <!-- Details for song  2-->
+    <string name="song_2_name" translatable="false">It\'s you</string>
+    <string name="song_2_artist" translatable="false">Jeong Se Woon</string>
+
+    <!-- Details for song  3-->
+    <string name="song_3_name" translatable="false">Wanna Be</string>
+    <string name="song_3_artist" translatable="false">GFriend </string>
+
+    <!-- Details for song  4-->
+    <string name="song_4_name" translatable="false">Just a Little Bit More</string>
+    <string name="song_4_artist" translatable="false">Jinho, Rothy </string>
+
+    <!-- Details for song  5-->
+    <string name="song_5_name" translatable="false">Because I Only See You</string>
+    <string name="song_5_artist" translatable="false">Kim Na Young </string>
+
+    <!-- Details for song  6-->
+    <string name="song_6_name" translatable="false">Why Am I Like This</string>
+    <string name="song_6_artist" translatable="false">Lee Da Yeon </string>
+
+    <!-- Details for song  7-->
+    <string name="song_7_name" translatable="false">In the End</string>
+    <string name="song_7_artist" translatable="false">Yun Ddan Ddan</string>
+
+    <!-- Details for song  8-->
+    <string name="song_8_name" translatable="false">Words Being Said For the First Time</string>
+    <string name="song_8_artist" translatable="false">Song Yuvin</string>
+</resources>
