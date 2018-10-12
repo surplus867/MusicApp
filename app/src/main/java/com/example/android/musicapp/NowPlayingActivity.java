@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class NowPlayingActivity extends AppCompatActivity {
+    public static final String ARG_SONG = "ARG_SONG";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

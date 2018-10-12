@@ -2,6 +2,8 @@ package com.example.android.musicapp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
@@ -16,24 +18,27 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.android.musicapp.NowPlayingActivity.ARG_SONG;
+
 public class SongsAdapter extends BaseAdapter {
-    Context context;
-    List<Songs> songs;
+    private Context mContext;
+    private List<Songs> mSongs;
     private LayoutInflater mInflater;
+
     public SongsAdapter(Context context, List<Songs> songs) {
         mInflater = LayoutInflater.from(context);
-        this.context = context;
-        this.songs = songs;
+        mContext = context;
+        mSongs = songs;
     }
 
     @Override
     public int getCount() {
-        return songs.size();
+        return mSongs.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return songs.get(position);
+        return mSongs.get(position);
     }
 
     @Override
@@ -41,7 +46,7 @@ public class SongsAdapter extends BaseAdapter {
         return position;
     }
     public void updateData(List<Songs> songs) {
-        songs = songs;
+        mSongs = songs;
         notifyDataSetChanged();
     }
     @NonNull
@@ -49,7 +54,7 @@ public class SongsAdapter extends BaseAdapter {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View view;
         ViewHolder holder;
-        final Songs currentSong = songs.get(position);
+        final Songs currentSong = mSongs.get(position);
         if (convertView == null) {
             view = mInflater.inflate(R.layout.song_list_item, parent, false);
             holder = new ViewHolder();
@@ -70,7 +75,11 @@ public class SongsAdapter extends BaseAdapter {
         holder.songItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,currentSong.getSongName(),Toast.LENGTH_LONG).show();
+                Toast.makeText(mContext,currentSong.getSongName(), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(mContext.getApplicationContext(),NowPlayingActivity.class);
+                intent.putExtra("ARG_SONG",ARG_SONG);
+                mContext.startActivity(intent);
+
             }
         });
         return view;
