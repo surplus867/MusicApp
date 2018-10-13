@@ -52,8 +52,8 @@ public class SongsAdapter extends BaseAdapter {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View view;
-        ViewHolder holder;
+        final View view;
+        final ViewHolder holder;
         final Songs currentSong = mSongs.get(position);
         if (convertView == null) {
             view = mInflater.inflate(R.layout.song_list_item, parent, false);

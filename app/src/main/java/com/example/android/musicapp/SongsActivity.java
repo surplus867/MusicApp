@@ -11,6 +11,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.android.musicapp.NowPlayingActivity.ARG_SONG;
+
 public class SongsActivity extends AppCompatActivity {
     ListView listView;
     SongsAdapter adapter;
@@ -21,7 +23,8 @@ public class SongsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song);
         Intent intent = getIntent();
-        listView = (ListView) findViewById(R.id.list_songs);
+
+
 
                 songsList.add(new Songs(getString(R.string.song_1_name)
                         , getString(R.string.song_1_artist)));
@@ -40,6 +43,7 @@ public class SongsActivity extends AppCompatActivity {
                 songsList.add(new Songs(getString(R.string.song_8_name)
                         , getString(R.string.song_8_artist)));
 
+
                 //Songs song1 = new Songs("songName","artistName");
                 //Songs song2 = new Songs("songName","artistName");
 
@@ -48,12 +52,24 @@ public class SongsActivity extends AppCompatActivity {
                 //songsList.add(song2);
 
 
-                adapter = new SongsAdapter(this, songsList);
+               final SongsAdapter adapter = new SongsAdapter(this, songsList);
+               final ListView listView = (ListView) findViewById(R.id.list_songs);
                 listView.setAdapter(adapter);
                 //adapter.updateData(songsList);
+        listView.setOnItemClickListener(new   AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> adapterView, View  view, int position, long l) {
+                //Songs song = songsList.get(position);
+
+                Intent anotherActivityIntent = new  Intent(SongsActivity.this,NowPlayingActivity.class);
+                anotherActivityIntent.putExtra("ARG_SONG",ARG_SONG);
+                startActivity(anotherActivityIntent);
+
+            }
+        });
 
             }
         }
+
 
 
 
