@@ -22,8 +22,9 @@ public class SongsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song);
-        Intent intent = getIntent();
 
+
+         listView = (ListView) findViewById(R.id.list_songs);
 
 
                 songsList.add(new Songs(getString(R.string.song_1_name)
@@ -49,8 +50,7 @@ public class SongsActivity extends AppCompatActivity {
                 //songsList.add(song2);
 
 
-               final SongsAdapter adapter = new SongsAdapter(this, songsList);
-               final ListView listView = (ListView) findViewById(R.id.list_songs);
+                 adapter = new SongsAdapter(this, songsList);
                 listView.setAdapter(adapter);
                 //adapter.updateData(songsList);
         /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
