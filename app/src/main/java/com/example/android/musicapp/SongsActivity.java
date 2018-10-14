@@ -53,7 +53,7 @@ public class SongsActivity extends AppCompatActivity {
                final ListView listView = (ListView) findViewById(R.id.list_songs);
                 listView.setAdapter(adapter);
                 //adapter.updateData(songsList);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View  view, int position, long l) {
                 Songs songs = songsList.get(position);
 
@@ -63,7 +63,7 @@ public class SongsActivity extends AppCompatActivity {
                 startActivity(intent);
 
             }
-        });
+        });*/
 
             }
         }

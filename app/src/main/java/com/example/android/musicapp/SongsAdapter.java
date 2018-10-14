@@ -77,8 +77,8 @@ public class SongsAdapter extends BaseAdapter {
             public void onClick(View v) {
                 Toast.makeText(mContext,currentSong.getSongName(), Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(mContext.getApplicationContext(),NowPlayingActivity.class);
-                intent.putExtra("songNameKey","Song Name");
-                intent.putExtra("artistNameKey","Artist Name");
+                intent.putExtra("songNameKey","currentSong.getSongName");
+                intent.putExtra("artistNameKey","currentSong.getArtistName");
                 mContext.startActivity(intent);
 
             }

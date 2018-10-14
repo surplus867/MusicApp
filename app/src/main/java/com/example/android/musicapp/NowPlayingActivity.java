@@ -14,6 +14,13 @@ public class NowPlayingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playing_song);
 
+        TextView songNameTextView = findViewById(R.id.playing_song_name);
+        songNameTextView.setText(songName);
+
+        TextView artistNameTextView = findViewById(R.id.playing_song_artist);
+        artistNameTextView.setText(artistName);
+    }
+
         Intent intent = getIntent();
 
         String songName= intent.getStringExtra("songNameKey");
@@ -22,10 +29,5 @@ public class NowPlayingActivity extends AppCompatActivity {
 
         //Songs songs = getIntent().getParcelableExtra("songs");
 
-       /* TextView songNameTextView = findViewById(R.id.playing_song_name);
-        songNameTextView.setText(songName);
 
-        TextView artistNameTextView = findViewById(R.id.playing_song_artist);
-        artistNameTextView.setText(artistName);*/
-    }
 }
