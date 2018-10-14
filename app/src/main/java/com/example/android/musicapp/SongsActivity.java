@@ -22,7 +22,6 @@ public class SongsActivity extends AppCompatActivity {
 
          listView = (ListView) findViewById(R.id.list_songs);
 
-
                 songsList.add(new Songs(getString(R.string.song_1_name)
                         , getString(R.string.song_1_artist)));
                 songsList.add(new Songs(getString(R.string.song_2_name)
@@ -40,15 +39,7 @@ public class SongsActivity extends AppCompatActivity {
                 songsList.add(new Songs(getString(R.string.song_8_name)
                         , getString(R.string.song_8_artist)));
 
-
-
-                 adapter = new SongsAdapter(this, songsList);
+                adapter = new SongsAdapter(this, songsList);
                  listView.setAdapter(adapter);
-
-
-            }
+                 }
         }
-
-
-
-
