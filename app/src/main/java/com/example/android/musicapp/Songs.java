@@ -11,13 +11,6 @@ public class Songs {
         mArtistName = artistName;
 
     }
-    public void setmSongName(String mSongName) {
-        this.mSongName = mSongName;
-    }
-
-    public void setmArtistName(String mArtistName) {
-        this.mArtistName = mArtistName;
-    }
 
     public String getSongName() {
         return mSongName;
