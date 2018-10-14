@@ -21,13 +21,14 @@ public class NowPlayingActivity extends AppCompatActivity {
 
 
         Intent intent = getIntent();
+        if (intent != null);{
 
-        String songName = intent.getStringExtra("songNameKey");
+            String songName = intent.getStringExtra("songNameKey");
+            String artistName = intent.getStringExtra("artistNameKey");
+            songNameTextView.setText(songName);
+            artistNameTextView.setText(artistName);
+        }
 
-        String artistName = intent.getStringExtra("artistNameKey");
-
-        songNameTextView.setText(songName);
-        artistNameTextView.setText(artistName);
     }
 
         //Songs songs = getIntent().getParcelableExtra("songs");

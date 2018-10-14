@@ -51,7 +51,7 @@ public class SongsActivity extends AppCompatActivity {
 
 
                  adapter = new SongsAdapter(this, songsList);
-                listView.setAdapter(adapter);
+                 listView.setAdapter(adapter);
                 //adapter.updateData(songsList);
         /*listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View  view, int position, long l) {
