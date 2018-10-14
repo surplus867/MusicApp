@@ -20,7 +20,6 @@ public class NowPlayingActivity extends AppCompatActivity {
         TextView artistNameTextView = findViewById(R.id.playing_song_artist);
 
 
-
         Intent intent = getIntent();
 
         String songName = intent.getStringExtra("songNameKey");
