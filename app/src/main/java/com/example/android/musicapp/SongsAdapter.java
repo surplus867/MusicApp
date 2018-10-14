@@ -76,11 +76,10 @@ public class SongsAdapter extends BaseAdapter {
                 intent.putExtra("songNameKey",currentSong.getSongName());
                 intent.putExtra("artistNameKey",currentSong.getArtistName());
                 mContext.startActivity(intent);
-
-            }
+                }
         });
-        return view;
 
+        return view;
     }
     // Replace the contents of a view (invoked by the layout manager)
 
