@@ -18,7 +18,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.android.musicapp.NowPlayingActivity.ARG_SONG;
+//import static com.example.android.musicapp.NowPlayingActivity.ARG_SONG;
 
 public class SongsAdapter extends BaseAdapter {
     private Context mContext;
@@ -77,7 +77,8 @@ public class SongsAdapter extends BaseAdapter {
             public void onClick(View v) {
                 Toast.makeText(mContext,currentSong.getSongName(), Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(mContext.getApplicationContext(),NowPlayingActivity.class);
-                intent.putExtra("ARG_SONG",ARG_SONG);
+                intent.putExtra("songNameKey","Song Name");
+                intent.putExtra("artistNameKey","Artist Name");
                 mContext.startActivity(intent);
 
             }

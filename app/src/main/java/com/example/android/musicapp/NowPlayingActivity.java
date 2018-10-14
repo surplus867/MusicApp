@@ -6,21 +6,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class NowPlayingActivity extends AppCompatActivity {
-    public static final String ARG_SONG = "ARG_SONG";
+    //String ARG_SONG= getIntent().getStringExtra("ARG_SONG");
+    //public static final String ARG_SONG = "ARG_SONG";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_playing_song);
 
-        Songs songs = getIntent().getParcelableExtra("songs");
-     /*   Intent intent = getIntent();
+        Intent intent = getIntent();
 
-        String songName = intent.getStringExtra("song_name");
+        String songName= intent.getStringExtra("songNameKey");
 
-        String artistName = intent.getStringExtra("artist_name");
+        String artistName= intent.getStringExtra("artistNameKey");
 
-        TextView songNameTextView = findViewById(R.id.playing_song_name);
+        //Songs songs = getIntent().getParcelableExtra("songs");
+
+       /* TextView songNameTextView = findViewById(R.id.playing_song_name);
         songNameTextView.setText(songName);
 
         TextView artistNameTextView = findViewById(R.id.playing_song_artist);
