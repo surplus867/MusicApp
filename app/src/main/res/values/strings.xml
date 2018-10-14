@@ -49,4 +49,6 @@
     <!-- Details for song  8-->
     <string name="song_8_name" translatable="false">Words Being Said For the First Time</string>
     <string name="song_8_artist" translatable="false">Song Yuvin</string>
+    <string name="song_name">Song Name</string>
+    <string name="song_artist">Song Artist</string>
 </resources>

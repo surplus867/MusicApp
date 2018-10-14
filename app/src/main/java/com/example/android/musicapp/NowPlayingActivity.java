@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class NowPlayingActivity extends AppCompatActivity {
-    //String ARG_SONG= getIntent().getStringExtra("ARG_SONG");
-    //public static final String ARG_SONG = "ARG_SONG";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +14,10 @@ public class NowPlayingActivity extends AppCompatActivity {
 
         TextView songNameTextView = findViewById(R.id.playing_song_name);
 
-
         TextView artistNameTextView = findViewById(R.id.playing_song_artist);
 
-
         Intent intent = getIntent();
+        //Checking and see the intent is null
         if (intent != null){
 
             String songName = intent.getStringExtra("songNameKey");
@@ -30,8 +27,4 @@ public class NowPlayingActivity extends AppCompatActivity {
         }
 
     }
-
-        //Songs songs = getIntent().getParcelableExtra("songs");
-
-
 }

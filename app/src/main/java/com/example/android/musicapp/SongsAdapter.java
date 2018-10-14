@@ -1,24 +1,18 @@
 package com.example.android.musicapp;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
-
-//import static com.example.android.musicapp.NowPlayingActivity.ARG_SONG;
 
 public class SongsAdapter extends BaseAdapter {
     private Context mContext;
@@ -50,11 +44,13 @@ public class SongsAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
     @NonNull
+    // Create new views (invoked by the layout manager)
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         final View view;
         final ViewHolder holder;
         final Songs currentSong = mSongs.get(position);
+        //If convertView is null create a new view, else use convert view
         if (convertView == null) {
             view = mInflater.inflate(R.layout.song_list_item, parent, false);
             holder = new ViewHolder();
@@ -77,8 +73,8 @@ public class SongsAdapter extends BaseAdapter {
             public void onClick(View v) {
                 Toast.makeText(mContext,currentSong.getSongName(), Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(mContext,NowPlayingActivity.class);
-                intent.putExtra("songNameKey","currentSong.getSongName");
-                intent.putExtra("artistNameKey","currentSong.getArtistName");
+                intent.putExtra("songNameKey",currentSong.getSongName());
+                intent.putExtra("artistNameKey",currentSong.getArtistName());
                 mContext.startActivity(intent);
 
             }
@@ -86,8 +82,11 @@ public class SongsAdapter extends BaseAdapter {
         return view;
 
     }
-    // Return the size of your dataset (invoked by the layout manager)
+    // Replace the contents of a view (invoked by the layout manager)
+
+    // Return the size of your dataSet (invoked by the layout manager)
     public static class ViewHolder {
+
     TextView songTextView;
     TextView artistTextView;
     ConstraintLayout songItem;

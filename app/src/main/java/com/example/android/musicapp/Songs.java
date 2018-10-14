@@ -4,8 +4,6 @@ public class Songs {
 
     private String mSongName;
 
-
-
     private String mArtistName;
 
     public Songs(String songName, String artistName) {
@@ -28,5 +26,4 @@ public class Songs {
     public String getArtistName(){
         return mArtistName;
     }
-
 }
