@@ -21,7 +21,7 @@ public class NowPlayingActivity extends AppCompatActivity {
 
 
         Intent intent = getIntent();
-        if (intent != null);{
+        if (intent != null){
 
             String songName = intent.getStringExtra("songNameKey");
             String artistName = intent.getStringExtra("artistNameKey");
