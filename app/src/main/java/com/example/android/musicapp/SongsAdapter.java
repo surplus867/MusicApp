@@ -81,13 +81,13 @@ public class SongsAdapter extends BaseAdapter {
 
         return view;
     }
-    // Replace the contents of a view (invoked by the layout manager)
+// Replace the contents of a view (invoked by the layout manager)
 
-    // Return the size of your dataSet (invoked by the layout manager)
-    public static class ViewHolder {
+// Return the size of your dataSet (invoked by the layout manager)
+public static class ViewHolder {
 
     TextView songTextView;
     TextView artistTextView;
     ConstraintLayout songItem;
-    }
+}
 }
